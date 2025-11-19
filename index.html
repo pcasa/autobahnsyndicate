@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Autobahn Syndicate – Coming Soon</title>
+
+<style>
+    /* Brand colors */
+    :root {
+        --autobahn-red: #E02828;
+        --turbo-orange: #F46E2C;
+        --off-white: #F7F6F5;
+        --graphite: #0A0A0A;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: var(--graphite);
+        color: var(--off-white);
+        font-family: 'Montserrat', system-ui, sans-serif;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Background diagonal stripes (very subtle) */
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(224,40,40,0.10) 0%,
+            rgba(224,40,40,0.04) 30%,
+            rgba(244,110,44,0.10) 60%,
+            rgba(244,110,44,0.05) 100%
+        );
+        background-size: cover;
+        opacity: 0.35;
+        pointer-events: none;
+    }
+
+    .container {
+        text-align: center;
+        z-index: 10;
+        padding: 20px;
+    }
+
+    /* Shield logo (use your final PNG/SVG file here) */
+    .logo {
+        width: 180px;
+        height: auto;
+        margin: 0 auto 20px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: 4px;
+        color: var(--off-white);
+    }
+
+    h2 {
+        margin: 0;
+        margin-top: 10px;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: var(--turbo-orange);
+        letter-spacing: 8px;
+    }
+
+    .coming-soon {
+        margin-top: 35px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 6px;
+        color: var(--off-white);
+        text-transform: uppercase;
+        opacity: 0.85;
+    }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.3rem; letter-spacing: 5px; }
+        .coming-soon { font-size: 1.1rem; letter-spacing: 4px; }
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Replace src with your actual logo file -->
+        <img src="logo.png" class="logo" alt="Autobahn Syndicate Logo" />
+
+        <h1>AUTOBAHN</h1>
+        <h2>SYNDICATE</h2>
+
+        <div class="coming-soon">COMING SOON</div>
+    </div>
+</body>
+</html>
